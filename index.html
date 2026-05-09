@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Проект Я — авторский интенсив для предпринимателей и лидеров</title>
-  <meta name="description" content="Иммерсивный интенсив для предпринимателей и лидеров. 5 дней в Геленджике, малая группа, индивидуальный отбор. Метод: проектное мышление, энергоменеджмент, проживание лидерства, версионная пересборка Я." />
+  <meta name="description" content="Авторская программа для предпринимателей и лидеров. Малая группа, 4 дня в Геленджике, индивидуальная сборка. Место, где можно посмотреть на собственную жизнь как на проект и собрать маршрут на ближайшие годы." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,13 +44,14 @@
   </script>
 
   <style>
-    html { scroll-behavior: smooth; }
     body {
       font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
       font-feature-settings: "ss01", "cv11";
       background: #fbf9f4;
       color: #0f1418;
+      overflow-x: hidden;
     }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
     .font-display {
       font-family: 'Fraunces', Georgia, serif;
       font-optical-sizing: auto;
@@ -321,6 +322,7 @@
       left: 12px;
       right: 12px;
       bottom: 12px;
+      bottom: calc(12px + env(safe-area-inset-bottom, 0px));
       z-index: 35;
       display: none;
       align-items: center;
@@ -337,6 +339,7 @@
       transition: transform 0.45s cubic-bezier(0.2,0.7,0.2,1), opacity 0.3s ease;
       opacity: 0;
       pointer-events: none;
+      text-decoration: none;
     }
     .mobile-sticky-cta.visible {
       transform: translateY(0);
@@ -522,7 +525,10 @@
         <!-- Left: copy + CTA -->
         <div>
           <p class="rise rise-3 max-w-[44ch] text-[18px] leading-[1.7] text-stone sm:text-[20px] sm:leading-[1.65] text-pretty">
-            Иммерсивный интенсив для предпринимателей, собственников и&nbsp;лидеров, которые хотят пересобрать собственный маршрут на&nbsp;следующие 3–5&nbsp;лет — не&nbsp;через мотивацию и&nbsp;не&nbsp;через очередной курс, а&nbsp;через структурную работу с&nbsp;собой как с&nbsp;системой.
+            Авторская программа для предпринимателей и&nbsp;лидеров. Малая группа, четыре дня в&nbsp;Геленджике, индивидуальная сборка под состав.
+          </p>
+          <p class="rise rise-3 mt-5 max-w-[44ch] text-[15.5px] leading-[1.75] text-stone/80 sm:text-[16.5px] sm:leading-[1.7]">
+            Это место, где можно остановиться и&nbsp;посмотреть на&nbsp;собственную жизнь как на&nbsp;проект — увидеть структуру, восстановить ресурс и&nbsp;собрать понятный маршрут на&nbsp;ближайшие годы.
           </p>
 
           <div class="rise rise-4 mt-7 inline-flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] text-ink/70">
@@ -573,33 +579,6 @@
 
     </div>
 
-    <!-- Bottom marquee strip with key principles -->
-    <div class="relative border-t border-ink/8 bg-cream/60">
-      <div class="mx-auto max-w-7xl overflow-hidden px-5 sm:px-8">
-        <div class="flex flex-wrap items-center gap-x-10 gap-y-3 py-5 text-[13px] text-stone/85">
-          <span class="flex items-center gap-2">
-            <span class="font-display italic text-ochre">01</span>
-            Проектное мышление о&nbsp;себе
-          </span>
-          <span class="text-ink/20">/</span>
-          <span class="flex items-center gap-2">
-            <span class="font-display italic text-ochre">02</span>
-            Бухгалтерия энергии
-          </span>
-          <span class="text-ink/20">/</span>
-          <span class="flex items-center gap-2">
-            <span class="font-display italic text-ochre">03</span>
-            Лидерство в&nbsp;проживании
-          </span>
-          <span class="text-ink/20">/</span>
-          <span class="flex items-center gap-2">
-            <span class="font-display italic text-ochre">04</span>
-            Версионная пересборка Я
-          </span>
-        </div>
-      </div>
-    </div>
-
     <!-- Panoramic Gelendzhik horizon — cinematic bottom strip of hero -->
     <div class="hero-strip" aria-hidden="true">
       <div class="hero-strip-caption">Геленджик · Маркотхский хребет</div>
@@ -629,9 +608,22 @@
           <div class="relative rounded-[28px] bg-ink p-8 text-paper shadow-soft sm:rounded-[34px] sm:p-10 md:p-12">
             <div class="eyebrow text-gold">Ключевая идея программы</div>
             <div class="mt-8 space-y-6 font-display text-[22px] font-light leading-[1.4] tracking-tightish text-paper/92 md:text-[26px] md:leading-[1.4]">
-              <p class="flex gap-4"><span class="big-num text-gold/70 text-[28px] md:text-[32px] leading-none">·</span> Принять факт, что высокая степень неопределённости — новая реальность.</p>
-              <p class="flex gap-4"><span class="big-num text-gold/70 text-[28px] md:text-[32px] leading-none">·</span> Сосредоточиться не&nbsp;на&nbsp;попытке контролировать внешнюю среду, а&nbsp;на&nbsp;построении и&nbsp;пересборке себя как системы с&nbsp;высокой адаптивностью.</p>
-              <p class="flex gap-4"><span class="big-num text-gold/70 text-[28px] md:text-[32px] leading-none">·</span> Собрать себя как Проект, который умеет жить, выбирать и&nbsp;реализовываться при&nbsp;<span class="italic">любых внешних условиях</span>.</p>
+              <p class="flex gap-4">
+                <span class="flex-shrink-0 text-gold/70 text-[28px] md:text-[32px] leading-none">·</span>
+                <span>Принять факт, что высокая степень неопределённости — новая реальность.</span>
+              </p>
+              <p class="flex gap-4">
+                <span class="flex-shrink-0 text-gold/70 text-[28px] md:text-[32px] leading-none">·</span>
+                <span>Сосредоточиться не&nbsp;на&nbsp;попытке контролировать внешнюю среду, а&nbsp;на&nbsp;построении и&nbsp;пересборке себя как системы с&nbsp;высокой адаптивностью.</span>
+              </p>
+              <p class="flex gap-4">
+                <span class="flex-shrink-0 text-gold/70 text-[28px] md:text-[32px] leading-none">·</span>
+                <span>Собрать себя как Проект, который умеет жить, выбирать и&nbsp;реализовываться при&nbsp;любых внешних условиях.</span>
+              </p>
+              <p class="flex gap-4">
+                <span class="flex-shrink-0 text-gold/70 text-[28px] md:text-[32px] leading-none">·</span>
+                <span>Развить устойчивость как навык — способность проходить через любую неопределённость, не&nbsp;теряя себя и&nbsp;своего курса.</span>
+              </p>
             </div>
           </div>
         </div>
@@ -696,7 +688,7 @@
       </div>
 
       <!-- Three tracks -->
-      <div class="mt-16 grid gap-5 lg:grid-cols-3 lg:gap-6">
+      <div class="mt-16 grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-6">
         <div class="reveal card-hover relative overflow-hidden rounded-[26px] border border-ink/10 bg-paper p-7 sm:p-8 md:p-10">
           <div class="absolute -right-4 -top-2 font-display text-[140px] font-light italic leading-none text-ink/[0.05]">I</div>
           <div class="relative">
@@ -729,8 +721,8 @@
           <div class="absolute -right-4 -top-2 font-display text-[140px] font-light italic leading-none text-ink/[0.05]">III</div>
           <div class="relative">
             <span class="eyebrow text-pine">Трек 03</span>
-            <div class="mt-4 font-display text-[26px] font-light leading-tight tracking-tightish md:text-[30px]">Лидерство<br /><span class="italic text-ochre">Опыт, не теория</span></div>
-            <p class="mt-5 text-[15px] leading-7 text-stone/90">Через ротацию ролей, командные задачи и физические активности вы видите собственное лидерство и собственную ведомость не в опросниках, а в проживании.</p>
+            <div class="mt-4 font-display text-[26px] font-light leading-tight tracking-tightish md:text-[30px]">Лидерство<br /><span class="italic text-ochre">Авторство своей жизни</span></div>
+            <p class="mt-5 text-[15px] leading-7 text-stone/90">Через перезагрузку себя — переход от&nbsp;реактивного поведения к&nbsp;лидерству в&nbsp;собственной жизни. Когда вы&nbsp;понимаете свои цели и&nbsp;задачи и&nbsp;принимаете решения от&nbsp;себя, а&nbsp;не&nbsp;от&nbsp;внешних обстоятельств.</p>
             <div class="mt-7 flex flex-wrap gap-2 text-[12px] uppercase tracking-[0.16em] text-stone/70">
               <span class="rounded-full border border-ink/12 px-3 py-1.5">Ротация ролей</span>
               <span class="rounded-full border border-ink/12 px-3 py-1.5">Run / Change</span>
@@ -759,7 +751,7 @@
         </p>
       </div>
 
-      <div class="mt-14 grid gap-6 lg:grid-cols-3 lg:gap-7">
+      <div class="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-7">
 
         <!-- Михаил -->
         <div class="reveal rounded-[24px] bg-paper p-6 shadow-soft sm:rounded-[28px] sm:p-7">
@@ -849,78 +841,6 @@
     </div>
   </section>
 
-  <!-- HOW WE SELECT -->
-  <section id="select" class="relative grain bg-paper">
-    <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-28 lg:py-36">
-      <div class="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-        <div class="reveal">
-          <div class="flex items-center gap-4">
-            <span class="eyebrow text-ochre">Отбор</span>
-            <span class="div-line w-24"></span>
-          </div>
-          <h2 class="mt-6 font-display text-[32px] font-light leading-[1.04] tracking-tighter2 text-balance sm:text-[40px] md:text-[48px]">
-            Мы не работаем со случайными участниками.
-          </h2>
-          <div class="mt-7 space-y-5 text-[15.5px] leading-8 text-stone sm:text-[16.5px] sm:leading-9 text-pretty">
-            <p>Это не маркетинговая воронка отказов. Это часть метода: программа собирается под группу, а не группа подгоняется под программу.</p>
-            <p>Поэтому путь к участию — пять шагов. Прежде чем мы согласимся работать с человеком, мы должны увидеть, как именно его запрос ложится в формат — и наоборот.</p>
-          </div>
-          <a href="#cta" class="mt-9 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-[14px] font-medium text-paper transition hover:bg-stone">
-            Начать с установочного созвона →
-          </a>
-        </div>
-
-        <ol class="reveal delay-1 space-y-3">
-          <li class="group rounded-[20px] border border-ink/8 bg-cream/60 p-6 transition hover:border-ink/20 sm:p-7">
-            <div class="flex items-start gap-5">
-              <span class="num-tab bg-paper">01</span>
-              <div>
-                <div class="font-display text-[20px] font-light tracking-tightish">Установочный созвон</div>
-                <p class="mt-2 text-[14.5px] leading-7 text-stone/85">40–50 минут. Знакомство со вторым мастером, проговор контекста, задач и того, ваше ли это в принципе.</p>
-              </div>
-            </div>
-          </li>
-          <li class="group rounded-[20px] border border-ink/8 bg-cream/60 p-6 transition hover:border-ink/20 sm:p-7">
-            <div class="flex items-start gap-5">
-              <span class="num-tab bg-paper">02</span>
-              <div>
-                <div class="font-display text-[20px] font-light tracking-tightish">Глубинная сессия</div>
-                <p class="mt-2 text-[14.5px] leading-7 text-stone/85">Индивидуальная работа с каждым кандидатом отдельно. Здесь становится видно, насколько метод и запрос подходят друг другу.</p>
-              </div>
-            </div>
-          </li>
-          <li class="group rounded-[20px] border border-ink/8 bg-cream/60 p-6 transition hover:border-ink/20 sm:p-7">
-            <div class="flex items-start gap-5">
-              <span class="num-tab bg-paper">03</span>
-              <div>
-                <div class="font-display text-[20px] font-light tracking-tightish">Формирование группы</div>
-                <p class="mt-2 text-[14.5px] leading-7 text-stone/85">Мы собираем состав так, чтобы группа работала как катализатор. Не «кто первый успел», а кто рядом усилит каждого.</p>
-              </div>
-            </div>
-          </li>
-          <li class="group rounded-[20px] border border-ink/8 bg-cream/60 p-6 transition hover:border-ink/20 sm:p-7">
-            <div class="flex items-start gap-5">
-              <span class="num-tab bg-paper">04</span>
-              <div>
-                <div class="font-display text-[20px] font-light tracking-tightish">Подтверждение и аванс</div>
-                <p class="mt-2 text-[14.5px] leading-7 text-stone/85">Подтверждение от обеих сторон. Небольшой аванс организационного сбора фиксирует место в группе.</p>
-              </div>
-            </div>
-          </li>
-          <li class="group rounded-[20px] border border-ink/8 bg-cream/60 p-6 transition hover:border-ink/20 sm:p-7">
-            <div class="flex items-start gap-5">
-              <span class="num-tab bg-paper">05</span>
-              <div>
-                <div class="font-display text-[20px] font-light tracking-tightish">Подготовка и проведение</div>
-                <p class="mt-2 text-[14.5px] leading-7 text-stone/85">Финальная сборка программы под состав, индивидуальные акценты и выезд в Геленджик.</p>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
   <!-- FIT / NOT FIT -->
   <section class="bg-cream">
     <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-28 lg:py-32">
@@ -996,6 +916,82 @@
     </div>
   </section>
 
+  <!-- RULES OF SPACE — safety & format promise -->
+  <section id="rules" class="relative overflow-hidden bg-pine text-paper">
+    <div aria-hidden="true" class="pointer-events-none absolute -left-[6%] top-[-6%] select-none ya-graphic text-[clamp(280px,42vw,560px)] text-paper/[0.045]">·</div>
+    <div class="grain-light absolute inset-0"></div>
+
+    <div class="relative mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-28 lg:py-32">
+
+      <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end lg:gap-14">
+        <div class="reveal">
+          <div class="flex items-center gap-4">
+            <span class="eyebrow text-gold">Правила пространства</span>
+            <span class="h-px w-24 bg-gold/40"></span>
+          </div>
+          <h2 class="mt-6 font-display text-[30px] font-light leading-[1.05] tracking-tighter2 text-balance sm:text-[42px] md:text-[52px]">
+            Мы вместе создаём особое пространство для работы.
+          </h2>
+        </div>
+        <p class="reveal delay-2 max-w-xl text-[15.5px] leading-[1.8] text-paper/75 sm:text-[16.5px] sm:leading-[1.85]">
+          Глубокая работа возможна только в&nbsp;по-настоящему безопасной среде — и&nbsp;продолжается только тогда, когда у&nbsp;неё есть продолжение в&nbsp;реальной жизни. Четыре опоры, без которых формат не&nbsp;собирается.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-4 sm:mt-16 sm:gap-5 sm:grid-cols-2">
+
+        <div class="reveal rounded-[22px] border border-paper/10 bg-paper/[0.03] p-6 backdrop-blur-sm sm:p-8">
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-[36px] font-light italic text-gold/80 leading-none">01</span>
+            <span class="eyebrow text-gold/85">Конфиденциальность</span>
+          </div>
+          <div class="mt-4 font-display text-[22px] font-light leading-[1.2] tracking-tightish sm:text-[26px]">
+            Все участники подписывают NDA
+          </div>
+          <p class="mt-4 text-[14.5px] leading-7 text-paper/72">Что говорят и&nbsp;что узнают друг о&nbsp;друге, остаётся внутри. Без исключений и&nbsp;без &laquo;а&nbsp;этим можно поделиться&raquo;.</p>
+        </div>
+
+        <div class="reveal delay-1 rounded-[22px] border border-paper/10 bg-paper/[0.03] p-6 backdrop-blur-sm sm:p-8">
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-[36px] font-light italic text-gold/80 leading-none">02</span>
+            <span class="eyebrow text-gold/85">Цифровой детокс</span>
+          </div>
+          <div class="mt-4 font-display text-[22px] font-light leading-[1.2] tracking-tightish sm:text-[26px]">
+            Без телефонов и&nbsp;ноутбуков
+          </div>
+          <p class="mt-4 text-[14.5px] leading-7 text-paper/72">Устройства сдаются на&nbsp;старте, заместители по&nbsp;вашим делам предупреждены заранее. Возврат — на&nbsp;утро дня&nbsp;выхода, в&nbsp;парке.</p>
+        </div>
+
+        <div class="reveal delay-2 rounded-[22px] border border-paper/10 bg-paper/[0.03] p-6 backdrop-blur-sm sm:p-8">
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-[36px] font-light italic text-gold/80 leading-none">03</span>
+            <span class="eyebrow text-gold/85">Социальная дистанция</span>
+          </div>
+          <div class="mt-4 font-display text-[22px] font-light leading-[1.2] tracking-tightish sm:text-[26px]">
+            Никакого нетворкинга
+          </div>
+          <p class="mt-4 text-[14.5px] leading-7 text-paper/72">Не&nbsp;обмениваемся статусами, должностями и&nbsp;контактами. Каждый работает только над своим проектом — и&nbsp;только в&nbsp;этом помогает остальным.</p>
+        </div>
+
+        <div class="reveal delay-3 rounded-[22px] border border-gold/25 bg-paper/[0.04] p-6 backdrop-blur-sm sm:p-8 relative overflow-hidden">
+          <div aria-hidden="true" class="absolute -right-3 -bottom-3 font-display text-[110px] font-light italic leading-none text-gold/[0.08]">·</div>
+          <div class="relative">
+            <div class="flex items-baseline gap-3">
+              <span class="font-display text-[36px] font-light italic text-gold/80 leading-none">04</span>
+              <span class="eyebrow text-gold/85">ИИ-технология</span>
+            </div>
+            <div class="mt-4 font-display text-[22px] font-light leading-[1.2] tracking-tightish sm:text-[26px]">
+              Персональный ИИ-консультант
+            </div>
+            <p class="mt-4 text-[14.5px] leading-7 text-paper/72">В&nbsp;процессе программы вы&nbsp;создаёте для себя персонального ИИ-консультанта, который будет помогать удерживать ваш фокус в&nbsp;реальной жизни после программы.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- OUTCOMES / WHAT YOU TAKE WITH YOU -->
   <section id="outcomes" class="relative overflow-hidden bg-ink text-paper">
     <div aria-hidden="true" class="pointer-events-none absolute -right-[8%] top-[10%] select-none ya-graphic text-[clamp(220px,42vw,560px)] text-gold/[0.07]">·</div>
@@ -1021,45 +1017,71 @@
         <div class="reveal bg-ink p-7 sm:p-9 md:p-10">
           <div class="flex items-baseline gap-4">
             <span class="big-num text-[44px] text-gold sm:text-[56px]">01</span>
-            <span class="eyebrow text-paper/55">Личная карта проекта</span>
+            <span class="eyebrow text-paper/55">Карта проекта</span>
           </div>
           <div class="mt-4 font-display text-[22px] font-light leading-[1.2] tracking-tightish sm:text-[26px]">
-            Финальная карта <span class="italic text-gold/85">«Проект Я»</span>
+            Понимание, куда вы&nbsp;идёте и&nbsp;зачем
           </div>
-          <p class="mt-4 text-[14.5px] leading-7 text-paper/72">Суть, цель года, ключевые направления, ресурсы, риски, метрики и&nbsp;маршрут движения. Документ, к&nbsp;которому возвращаетесь в&nbsp;точках выбора.</p>
+          <p class="mt-4 text-[14.5px] leading-7 text-paper/72">Цели на&nbsp;ближайший год и&nbsp;три, ключевые направления, ресурсы и&nbsp;риски. Личный документ, к&nbsp;которому возвращаетесь в&nbsp;точках выбора.</p>
         </div>
 
         <div class="reveal delay-1 bg-ink p-7 sm:p-9 md:p-10">
           <div class="flex items-baseline gap-4">
             <span class="big-num text-[44px] text-gold sm:text-[56px]">02</span>
-            <span class="eyebrow text-paper/55">Карта энергобаланса</span>
+            <span class="eyebrow text-paper/55">Карта энергии</span>
           </div>
           <div class="mt-4 font-display text-[22px] font-light leading-[1.2] tracking-tightish sm:text-[26px]">
-            Что усиливать, что отсекать
+            Что вас усиливает, что выжигает
           </div>
-          <p class="mt-4 text-[14.5px] leading-7 text-paper/72">Осознанная картина собственного ресурса по&nbsp;четырём счетам. Понимание, что реально питает, а&nbsp;что компенсирует дефициты и&nbsp;выжигает изнутри.</p>
+          <p class="mt-4 text-[14.5px] leading-7 text-paper/72">Картина собственного ресурса в&nbsp;четырёх измерениях. Понимание, что питает по-настоящему, а&nbsp;что лишь компенсирует дефицит.</p>
         </div>
 
         <div class="reveal delay-2 bg-ink p-7 sm:p-9 md:p-10">
           <div class="flex items-baseline gap-4">
             <span class="big-num text-[44px] text-gold sm:text-[56px]">03</span>
-            <span class="eyebrow text-paper/55">Лидерские паттерны</span>
+            <span class="eyebrow text-paper/55">Зеркало лидерства</span>
           </div>
           <div class="mt-4 font-display text-[22px] font-light leading-[1.2] tracking-tightish sm:text-[26px]">
-            Как вы&nbsp;ведёте и&nbsp;где ведомы
+            Каким лидером вас видят рядом
           </div>
-          <p class="mt-4 text-[14.5px] leading-7 text-paper/72">Видение собственных лидерских паттернов и&nbsp;точек роста во&nbsp;взаимодействии с&nbsp;людьми — увиденное не&nbsp;в&nbsp;опросниках, а&nbsp;в&nbsp;живом проживании.</p>
+          <p class="mt-4 text-[14.5px] leading-7 text-paper/72">Как вы&nbsp;принимаете решения, влияете на&nbsp;других и&nbsp;где ваши слепые зоны. Не&nbsp;по&nbsp;опросникам, а&nbsp;по&nbsp;живому отражению группы и&nbsp;мастеров.</p>
         </div>
 
         <div class="reveal delay-3 bg-ink p-7 sm:p-9 md:p-10">
           <div class="flex items-baseline gap-4">
             <span class="big-num text-[44px] text-gold sm:text-[56px]">04</span>
-            <span class="eyebrow text-paper/55">План первых 30&nbsp;дней</span>
+            <span class="eyebrow text-paper/55">Внутренний ресурс</span>
+          </div>
+          <div class="mt-4 font-display text-[22px] font-light leading-[1.2] tracking-tightish sm:text-[26px]">
+            То, что будет двигать&nbsp;вас изнутри
+          </div>
+          <p class="mt-4 text-[14.5px] leading-7 text-paper/72">Не&nbsp;только цели, которые надо удерживать волей, а&nbsp;состояние и&nbsp;внутренний двигатель, из&nbsp;которого решения принимаются естественно.</p>
+        </div>
+
+        <div class="reveal bg-ink p-7 sm:p-9 md:p-10">
+          <div class="flex items-baseline gap-4">
+            <span class="big-num text-[44px] text-gold sm:text-[56px]">05</span>
+            <span class="eyebrow text-paper/55">Маршрут на&nbsp;30 дней</span>
           </div>
           <div class="mt-4 font-display text-[22px] font-light leading-[1.2] tracking-tightish sm:text-[26px]">
             Чтобы сдвиг не&nbsp;остался опытом
           </div>
-          <p class="mt-4 text-[14.5px] leading-7 text-paper/72">Конкретные шаги на&nbsp;первый месяц после программы и&nbsp;три точки возврата — 7-й, 30-й и&nbsp;90-й день. Чтобы трансформация прошла из&nbsp;интенсива в&nbsp;живую жизнь.</p>
+          <p class="mt-4 text-[14.5px] leading-7 text-paper/72">Конкретные шаги первого месяца после программы. Чтобы трансформация перешла из&nbsp;интенсива в&nbsp;живую жизнь.</p>
+        </div>
+
+        <div class="reveal delay-1 bg-ink p-7 sm:p-9 md:p-10 relative overflow-hidden">
+          <div aria-hidden="true" class="absolute -right-3 -bottom-3 font-display text-[100px] font-light italic leading-none text-gold/[0.08]">·</div>
+          <div class="relative">
+            <div class="flex items-baseline gap-4">
+              <span class="big-num text-[44px] text-gold sm:text-[56px]">06</span>
+              <span class="eyebrow text-paper/55">Персональный ИИ-консультант</span>
+            </div>
+            <div class="mt-4 font-display text-[22px] font-light leading-[1.2] tracking-tightish sm:text-[26px]">
+              Ваш собственный цифровой консультант
+            </div>
+            <p class="mt-4 text-[14.5px] leading-7 text-paper/72">В&nbsp;программе вы&nbsp;создаёте для себя ИИ-консультанта, обученного на&nbsp;вашей собственной работе. Он&nbsp;знает ваш контекст, помнит, как вы&nbsp;рассуждали в&nbsp;сильной точке программы, и&nbsp;помогает удерживать ваш фокус в&nbsp;реальной жизни.</p>
+            <p class="mt-3 text-[13px] leading-6 text-paper/55">Доступ — после программы, в&nbsp;той LLM, которой вы&nbsp;пользуетесь.</p>
+          </div>
         </div>
 
       </div>
@@ -1083,30 +1105,41 @@
         </p>
       </div>
 
-      <div class="mt-14 grid gap-5 lg:grid-cols-3 lg:gap-6">
-        <div class="reveal rounded-[24px] border border-ink/10 bg-cream p-7 sm:p-9">
+      <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+        <div class="reveal rounded-[24px] border border-ink/10 bg-cream p-7 sm:p-8">
           <div class="flex items-baseline gap-3">
-            <span class="big-num text-[64px] text-ochre">7</span>
+            <span class="big-num text-[56px] text-ochre">7</span>
             <span class="eyebrow text-stone/70">дней</span>
           </div>
-          <div class="mt-3 font-display text-[22px] font-light tracking-tightish">Точка интеграции</div>
-          <p class="mt-4 text-[14.5px] leading-7 text-stone/90">Первый созвон в группе. Что осело, что начало размываться, что важно зафиксировать сейчас, пока опыт ещё горячий.</p>
+          <div class="mt-3 font-display text-[20px] font-light tracking-tightish">Точка интеграции</div>
+          <p class="mt-3 text-[14px] leading-[1.65] text-stone/90">Первый созвон в&nbsp;группе. Что осело, что начало размываться, что важно зафиксировать сейчас, пока опыт ещё горячий.</p>
         </div>
-        <div class="reveal delay-1 rounded-[24px] border border-ink/10 bg-cream p-7 sm:p-9">
+        <div class="reveal delay-1 rounded-[24px] border border-ink/10 bg-cream p-7 sm:p-8">
           <div class="flex items-baseline gap-3">
-            <span class="big-num text-[64px] text-ochre">30</span>
+            <span class="big-num text-[56px] text-ochre">30</span>
             <span class="eyebrow text-stone/70">дней</span>
           </div>
-          <div class="mt-3 font-display text-[22px] font-light tracking-tightish">Точка реальности</div>
-          <p class="mt-4 text-[14.5px] leading-7 text-stone/90">Месяц спустя. Что выдержало возвращение в обычную жизнь, а что осыпалось. Где нужна пересборка, какие решения требуют корректировки.</p>
+          <div class="mt-3 font-display text-[20px] font-light tracking-tightish">Точка реальности</div>
+          <p class="mt-3 text-[14px] leading-[1.65] text-stone/90">Месяц спустя. Что выдержало возвращение в&nbsp;обычную жизнь, а&nbsp;что осыпалось. Где нужна пересборка.</p>
         </div>
-        <div class="reveal delay-2 rounded-[24px] border border-ink/10 bg-cream p-7 sm:p-9">
+        <div class="reveal delay-2 rounded-[24px] border border-ink/10 bg-cream p-7 sm:p-8">
           <div class="flex items-baseline gap-3">
-            <span class="big-num text-[64px] text-ochre">90</span>
+            <span class="big-num text-[56px] text-ochre">90</span>
             <span class="eyebrow text-stone/70">дней</span>
           </div>
-          <div class="mt-3 font-display text-[22px] font-light tracking-tightish">Точка результата</div>
-          <p class="mt-4 text-[14.5px] leading-7 text-stone/90">Куда дошли. Где поменялась структура решений и привычек. Что проявилось как новый узор. И что выбираем дальше.</p>
+          <div class="mt-3 font-display text-[20px] font-light tracking-tightish">Точка результата</div>
+          <p class="mt-3 text-[14px] leading-[1.65] text-stone/90">Куда дошли. Где поменялась структура решений и&nbsp;привычек. Что проявилось как новый узор. И&nbsp;что выбираем дальше.</p>
+        </div>
+        <div class="reveal delay-3 rounded-[24px] border border-ochre/30 bg-ink p-7 text-paper sm:p-8 relative overflow-hidden">
+          <div aria-hidden="true" class="absolute -right-3 -top-3 font-display text-[80px] font-light italic leading-none text-gold/[0.10]">·</div>
+          <div class="relative">
+            <div class="flex items-baseline gap-3">
+              <span class="font-display text-[40px] font-light italic text-gold leading-none">∞</span>
+              <span class="eyebrow text-paper/55">всегда</span>
+            </div>
+            <div class="mt-3 font-display text-[20px] font-light tracking-tightish text-paper">Между точками возврата</div>
+            <p class="mt-3 text-[14px] leading-[1.65] text-paper/72">Ваш ИИ-консультант доступен в&nbsp;любой момент: вспомнить контекст программы, проверить решение, вернуться к&nbsp;собственной формулировке. Не&nbsp;заменяет созвоны — продлевает их&nbsp;эффект между ними.</p>
+          </div>
         </div>
       </div>
 
